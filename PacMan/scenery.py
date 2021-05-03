@@ -100,7 +100,6 @@ class Scenery(GameElement, MovableSubject):
                 movable.crossroad(directions)
             if isinstance(movable, PacMan.ghost.Ghost) and movable.row == self.hero.row\
                     and movable.column == self.hero.column:
-                self.hero.hero_img.colide()
                 self.hero.lifes -= 1
                 if self.hero.lifes <= 0:
                     self.game_state = GameStateConstants.GameOver
